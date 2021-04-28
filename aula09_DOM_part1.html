@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Aula 09 - JS</title>
+</head>
+<body onload="">
+	<!-- Document Object Model -->
+	<p id="demo">Isso é um teste</p>
+	<p class="exemplo"></p>
+	<p class="exemplo"></p>
+	<p class="exemplo"></p>
+
+
+	<img id="imagem" src="imagem.jpg" alt="Texto Alternativo">
+
+	<h1 onclick="this.innerHTML = 'Obrigado'">Clique Aqui</h1>
+
+	<h1 onclick="funcao(this)">Clique Aqui 2</h1>
+
+	<h1 id="demo">Clique Aqui 3</h1>
+
+
+	<script>
+		/*Buscar elemento por um ID*/
+		//document.getElementById('demo').innerHTML = 'Texto do meu parágrafo';
+
+		/*buscar elementos por uma TAG */
+		//console.log(document.getElementsByTagName('p')); //retorna um ARRAY
+
+		//buscar elementos por uma CLASSE
+		//console.log(document.getElementsByClassName('exemplo')); //retorna um ARRAY
+		/*
+		var x = document.getElementsByClassName('exemplo');
+		x[0].innerHTML = 'Texto 0';
+		x[1].innerHTML = 'Texto 1';
+		x[2].innerHTML = 'Texto 2';
+
+		var x = document.querySelectorAll('p.exemplo');
+		console.log(x);
+		*/
+
+		//escrever no Documento
+		document.write('Isso é um teste');
+
+		//trocar atributos
+		document.getElementById('imagem').src = 'foto.jpg';
+		document.getElementById('imagem').alt = 'Texto 2';
+
+		//mudando CSS
+		document.getElementById('demo').style.color = 'green';
+
+
+		function funcao(elemento)
+		{
+			elemento.innerHTML = 'Obrigado de Novo!';
+		}
+
+
+		function funcao2()
+		{
+			document.getElementById('demo').innerHTML = 'Obrigado mais uma vez';
+		}
+		document.getElementById('demo').onclick = funcao2;
+
+	</script>
+</body>
+</html>

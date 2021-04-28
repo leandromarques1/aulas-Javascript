@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Aula 05 - JS</title>
+</head>
+<body>
+	<script>
+		/*====MANIPULAÇÃO DE STRINGS====*/
+		var txt = 'Isso é um texto qualquer!';
+
+		//var txt = 'Pegou fogo na caixa d\'agua';
+		//var txt = "Pegou \"fogo\" na caixa d'agua";
+
+
+		console.log(txt);
+
+		//tamanho
+		console.log(txt.length); 
+		
+		//procura palavra qualquer
+		console.log(txt.indexOf('texto')); 
+		console.log(txt.lastindexOf('texto')); 
+		
+		console.log(txt.search('texto'));
+
+		//pega caracteres na posição (inicio, fim-1)
+		console.log(txt.slice(0,4));
+
+		console.log(txt.substr(5,10));
+
+		//substitui uma palvra por outra
+		console.log(txt.replace('texto', 'caractere'));
+
+
+		/*====MANIPULAÇÃO DE NÚMEROS====*/
+		var numero = 9.658;
+		console.log(numero);
+
+		//quant. de casas decimais a serem mostradas (ou arredondadas)
+		console.log(numero.toFixed(2));
+
+		//retornar quant. de dígitos
+		console.log(numero.toPrecision(2));
+
+
+	</script>
+</body>
+</html>

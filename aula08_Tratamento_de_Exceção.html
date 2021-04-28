@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Aula 08 - JS</title>
+</head>
+<body>
+	<p>Informe um número entre 10 e 20: </p>
+	
+	<input type="text" id="numero">
+
+	<button onclick = "verifica()"> Verificar </button>
+
+	<p id="msg"></p>
+
+	<script>
+		function verifica()
+		{
+			var x = document.getElementById('numero').value;
+		}
+
+		try
+		{
+			//verificar se algum foi ou não digitado
+			if (x == '') throw 'Informe um valor';
+
+			//verificar se o que foi digitado é um número
+			if (isNaN(x)) throw 'Você precisa informar um valor numerico';
+			x = Number(x); //forçar JavaScript a trabalhar com um Número
+
+			if (x < 10 || x > 20) throw 'Informe um numero entre 10 e 20';
+			
+			document.getElementById('msg').innerHTML = 'Perfeito, o valor está correto';
+		}
+		catch (erro)
+		{
+			document.getElementById('msg').innerHTML = 'Erro: ' + erro; 
+		}
+
+		finally
+		{
+			document.getElementById('numero').value = '';
+		}
+
+	</script>
+
+
+	<!-- 
+	<script>
+		//Tratamento de Exceção - Uso do TRY - CATCH
+		// TRY == tente executar isso
+		// CATCH == caso ocorra um erro, execute isso
+
+		try
+		{
+			aalert('Teste');
+		}
+		catch(erro)
+		{
+			alert('Erro: ' + erro);
+		}
+
+
+		
+
+		var x = 5;
+		try
+		{
+			if(x < 10) throw 'O valor de X precisa ser maior que 10';
+		}
+		catch(erro)
+		{
+			alert('Erro: ' + erro);
+		}
+
+	</script>
+	 -->
+</body>
+</html>

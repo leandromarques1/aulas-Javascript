@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Aula 03 - JS</title>
+</head>
+<body>
+	<script>
+		/*==========FUNÇÕES==========*/
+		 function alerta() 
+		 {
+		 	alert('olá!');
+		 }
+
+		 //chamada da função
+		 alerta();
+
+		 //usando parâmetros agr
+		 function alerta (mensagem)
+		 {
+		 	alert(mensagem);
+		 }
+		 //alerta('Essa é a mensagem de alerta!')
+
+		 //usando o RETURN
+		 function metade(num)
+		 {
+		 	return num/2;
+		 }
+		 alerta('A  metade de 15 é: '+ metade(15));
+		 
+		 function dividir (a, b)
+		 {
+		 	return a/b;
+		 }
+		 alerta('O resultado da divisão é: ' + dividir(15,3));
+
+		 //Variável local => está dentro do escopo de uma função
+		 //Variável Global => está fora do escopo da função, pertencendo a todo o código
+	</script>
+</body>
+</html>

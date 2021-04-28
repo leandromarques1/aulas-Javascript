@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Aula 06 - JS</title>
+</head>
+<body>
+	<script>
+		/*====ESTURTURA CONDICIONAL===*/
+		var n = 5;
+		if (n > 5)
+		{
+			console.log('Condição verdadeira');
+		}
+
+		/*
+		//outra forma de escrever (se não tiver outras linhas)
+		if (n > 5) console.log('Condição verdadeira');
+		*/
+
+		if (n > 6)
+		{
+			console.log('Primeira condição verdadeira');
+		}
+		else if (n==6)
+		{
+			console.log('Segunda Condição verdadeira');			
+		}
+		else
+		{
+			console.log('Condição falsa');
+		}
+
+
+		/*Switch - Case*/
+
+		var diaSemana = new Date().getDay();
+
+		switch (diaSemana)
+		{
+			case 6:
+				console.log('Hj é sábado! Dia de maldade');
+				break;
+			case 0:
+				console.log('Hj é domingo! Dia de ressaca');
+				break;
+			default:
+				console.log('Dia normal: trabalho + estudo');
+		}
+
+
+		/*For*/
+		var linguagens = ['PHP', 'JAVA', 'C++', 'Python'];
+		for (i = 0; i< linguagens.length(); i++)
+		{
+			console.log(linguagens[i]);
+		}
+
+
+
+	</script>
+</body>
+</html>

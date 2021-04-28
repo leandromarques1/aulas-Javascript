@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Aula 04 - JS</title>
+</head>
+<body>
+	<script>
+		var nome = 'Anderson';
+		var sobrenome = 'Leandro';
+		var idade = 25;
+		/*Criando um Array*/
+		var pessoaArray = ['Anderson', 'Leandro', 25];
+		console.log(pessoaArray[0])
+		/*
+		Array só é interessante quando todos os elementos são do mesmo tipo
+		*/
+
+		/*Para elementos de tipos diferentes, é melhor criar Objeto*/
+		var pessoaObjeto = {nome: 'Anderson', sobrenome: 'Leandro', idade: 25};
+		/*Indices estão em texto ao inves de números. Gera uma forma mais precisa para acessar informação, não precisando se preocupar com sua localização*/
+		console.log(pessoaObjeto['nome']); //forma 1 de acessar 
+		console.log(pessoaObjeto.nome); //forma 2 de acessar 
+
+		/*Criar Método dentro de objeto*/
+		var pessoaAndar = {nome: 'Anderson', sobrenome: 'Leandro', idade: 25, andar: function(){alert('caminhando')}};
+		/*ANDAR é um método*/
+
+		//tornando mais legível (mais indicável)
+		var pessoaAndar = 
+		{
+			nome: 'Anderson', 
+			sobrenome: 'Leandro', 
+			idade: 25, 
+			andar: function()
+			{
+				alert('caminhando');
+			}
+		};
+		console.log(pessoaAndar.andar());
+
+		/*==============================*/
+		var frutas = ['laranja', 'melancia', 'banana'];
+		console.log(frutas.length()); //calcular tamanho do ARRAY
+		
+		//adicionar item ao final do Array
+		frutas.push('pitanga');
+
+		//remover o último item do Array
+		frutas.pop();
+
+		//remover o primeiro item do Array
+		frutas.shift();
+
+		//adicionar item no início do Array
+		frutas.unshift('pitanga');
+
+		//ordenar itens no Array - ordem alfabética
+		frutas.sort();
+
+		//inverter ordem que está no momento do Array
+		frutas.reverse();
+
+
+		//transformar Array em String
+		console.log(frutas.toString());
+
+		//método Join - juntar elementos do array com algo entre eles
+		console.log(frutas.join(' - '));
+
+
+	</script>
+</body>
+</html>
